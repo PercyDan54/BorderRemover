@@ -1,0 +1,6 @@
+{
+  "farlands.options.title": "世界生成设置",
+  "farlands.options.offset": "地形生成偏移",
+  "farlands.options.shift": "偏移边境之地至 0,0",
+  "farlands.options.enable": "生成边境之地"
+}

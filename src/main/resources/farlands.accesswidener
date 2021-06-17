@@ -1,0 +1,7 @@
+accessWidener v1 named
+
+accessible class net/minecraft/world/border/WorldBorder$Area
+accessible class net/minecraft/world/border/WorldBorder$StaticArea
+accessible class net/minecraft/client/option/GameOptions$Visitor
+accessible method net/minecraft/client/option/Option getGenericLabel (Lnet/minecraft/text/Text;)Lnet/minecraft/text/Text;
+accessible method net/minecraft/client/gui/screen/Screen addDrawableChild (Lnet/minecraft/client/gui/Element;)Lnet/minecraft/client/gui/Element;

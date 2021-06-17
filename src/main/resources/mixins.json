@@ -1,0 +1,26 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "me.percydan.borderremover.mixins",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+    "MixinAquiferSampler",
+    "MixinDimensionType",
+    "MixinEntity",
+    "MixinGameOptions",
+    "MixinMinecraftServer",
+    "MixinNoiseChunkGenerator",
+    "MixinNoiseSamplingConfig",
+    "MixinOctavePerlinNoiseSampler",
+    "MixinOptionsScreen",
+    "MixinPlayerEntity",
+    "MixinServerPlayNetWorkHandler",
+    "MixinWorld",
+    "MixinWorldBorder",
+    "MixinWorldBorderCommand",
+    "MixinWorldBorderProperties"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
