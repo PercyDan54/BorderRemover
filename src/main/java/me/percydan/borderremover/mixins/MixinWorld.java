@@ -17,6 +17,11 @@ public abstract class MixinWorld implements WorldAccess {
         ci.setReturnValue(true);
     }
 
+    @Inject(method = "isInvalidVertically", at = @At("RETURN"), cancellable = true)
+    private static void isInvalidVertically(CallbackInfoReturnable<Boolean> ci) {
+        ci.setReturnValue(false);
+    }
+
     /**
      * @author percydan
      */

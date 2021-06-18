@@ -21,16 +21,18 @@ public abstract class MixinGameOptions implements OptionAccess {
     }
 
     @Override
-    public int getGenOffset() { return genOffset; }
+    public int getGenOffset() {
+        return genOffset;
+    }
+
+    @Override
+    public void setGenOffset(int value) {
+        genOffset = value;
+    }
 
     @Override
     public boolean getEnableFarlands() {
         return enableFarlands;
-    }
-
-    @Override
-    public boolean getShiftFarlands() {
-        return shiftFarlands;
     }
 
     @Override
@@ -39,12 +41,12 @@ public abstract class MixinGameOptions implements OptionAccess {
     }
 
     @Override
-    public void setShiftFarlands(boolean value) {
-        shiftFarlands = value;
+    public boolean getShiftFarlands() {
+        return shiftFarlands;
     }
 
     @Override
-    public void setGenOffset(int value) {
-        genOffset = value;
+    public void setShiftFarlands(boolean value) {
+        shiftFarlands = value;
     }
 }

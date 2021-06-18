@@ -13,6 +13,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public abstract class MixinOctavePerlinNoiseSampler {
     @Inject(method = "maintainPrecision", at = @At("RETURN"), cancellable = true)
     private static void maintainPrecision(double value, CallbackInfoReturnable<Double> cir) {
-        cir.setReturnValue(value - (double)MathHelper.lfloor(value / 3.3554432E7D + 0.5D) * (((OptionAccess) MinecraftClient.getInstance().options).getEnableFarlands() ? 1D : 3.3554432E7D));
+        cir.setReturnValue(value - (double) MathHelper.lfloor(value / 3.3554432E7D + 0.5D) * (((OptionAccess) MinecraftClient.getInstance().options).getEnableFarlands() ? 1D : 3.3554432E7D));
     }
 }

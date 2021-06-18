@@ -21,9 +21,9 @@ public abstract class MixinOptionsScreen {
     private GameOptions settings;
 
     @Inject(method = "init", at = @At("RETURN"))
-    private void init(CallbackInfo ci){
-        ((Screen)(Object)this).addDrawableChild(new ButtonWidget(((Screen)(Object)this).width / 2 - 155, ((Screen)(Object)this).height / 6 + 144 - 6, 150, 20, new TranslatableText("farlands.options.title"), (p_213058_1_) -> {
-            MinecraftClient.getInstance().openScreen(new WorldGenOptionsScreen(((OptionsScreen)(Object)this), settings));
+    private void init(CallbackInfo ci) {
+        ((Screen) (Object) this).addDrawableChild(new ButtonWidget(((Screen) (Object) this).width / 2 - 155, ((Screen) (Object) this).height / 6 + 144 - 6, 150, 20, new TranslatableText("farlands.options.title"), (p_213058_1_) -> {
+            MinecraftClient.getInstance().openScreen(new WorldGenOptionsScreen(((OptionsScreen) (Object) this), settings));
         }));
     }
 }

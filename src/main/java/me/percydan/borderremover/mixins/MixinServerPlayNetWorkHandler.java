@@ -1,7 +1,6 @@
 package me.percydan.borderremover.mixins;
 
 import net.minecraft.server.network.ServerPlayNetworkHandler;
-import net.minecraft.util.math.MathHelper;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -16,6 +15,11 @@ public abstract class MixinServerPlayNetWorkHandler {
 
     @Inject(method = "clampHorizontal", at = @At("RETURN"), cancellable = true)
     private static void clampHorizontal(double d, CallbackInfoReturnable<Double> cir) {
-        cir.setReturnValue(MathHelper.clamp(d, Float.MIN_VALUE, Float.MAX_VALUE));
+        cir.setReturnValue(d);
+    }
+
+    @Inject(method = "clampVertical", at = @At("RETURN"), cancellable = true)
+    private static void clampVertical(double d, CallbackInfoReturnable<Double> cir) {
+        cir.setReturnValue(d);
     }
 }
