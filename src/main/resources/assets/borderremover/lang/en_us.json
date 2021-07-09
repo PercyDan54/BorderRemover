@@ -1,6 +1,5 @@
 {
   "farlands.options.title": "World generation settings",
   "farlands.options.offset": "Terrain Generation offset",
-  "farlands.options.shift": "Shift farlands to 0,0",
   "farlands.options.enable": "Enable farlands"
 }

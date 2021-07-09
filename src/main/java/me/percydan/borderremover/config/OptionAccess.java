@@ -9,7 +9,11 @@ public interface OptionAccess {
 
     void setEnableFarlands(boolean value);
 
-    boolean getShiftFarlands();
+    String getXZScale();
 
-    void setShiftFarlands(boolean value);
+    void setXZScale(String value);
+
+    String getYScale();
+
+    void setYScale(String value);
 }

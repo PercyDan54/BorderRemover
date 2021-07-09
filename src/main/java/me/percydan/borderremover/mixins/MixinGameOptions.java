@@ -9,15 +9,17 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(GameOptions.class)
 public abstract class MixinGameOptions implements OptionAccess {
-    public int genOffset = 0;
-    public boolean enableFarlands;
-    public boolean shiftFarlands;
+    private int genOffset = 0;
+    private String YScale = "default";
+    private String XZScale = "default";
+    private boolean enableFarlands;
 
     @Inject(method = "accept", at = @At("RETURN"))
     private void accept(GameOptions.Visitor visitor, CallbackInfo ci) {
-        this.genOffset = visitor.visitInt("genOffset", genOffset);
-        this.enableFarlands = visitor.visitBoolean("enableFarlands", enableFarlands);
-        this.shiftFarlands = visitor.visitBoolean("shiftFarlands", shiftFarlands);
+        genOffset = visitor.visitInt("genOffset", genOffset);
+        YScale = visitor.visitString("yScale", YScale);
+        XZScale = visitor.visitString("xzScale", XZScale);
+        enableFarlands = visitor.visitBoolean("enableFarlands", enableFarlands);
     }
 
     @Override
@@ -41,12 +43,22 @@ public abstract class MixinGameOptions implements OptionAccess {
     }
 
     @Override
-    public boolean getShiftFarlands() {
-        return shiftFarlands;
+    public String getXZScale() {
+        return XZScale;
     }
 
     @Override
-    public void setShiftFarlands(boolean value) {
-        shiftFarlands = value;
+    public void setXZScale(String value) {
+        XZScale = value;
+    }
+
+    @Override
+    public String getYScale() {
+        return YScale;
+    }
+
+    @Override
+    public void setYScale(String value) {
+        YScale = value;
     }
 }

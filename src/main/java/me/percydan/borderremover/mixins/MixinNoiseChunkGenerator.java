@@ -14,13 +14,9 @@ public abstract class MixinNoiseChunkGenerator {
     private ChunkPos applyOffset(ChunkPos pos) {
         int x = pos.x;
         int z = pos.z;
+        OptionAccess options = (OptionAccess) MinecraftClient.getInstance().options;
+        int offset = options.getGenOffset();
 
-        if (((OptionAccess) MinecraftClient.getInstance().options).getShiftFarlands()) {
-            x += 784425;
-            z += 784425;
-        }
-
-        int offset = (int) (Integer.MAX_VALUE * (long) ((OptionAccess) MinecraftClient.getInstance().options).getGenOffset() / 16);
         return new ChunkPos(x + offset, z + offset);
     }
 }
