@@ -1,12 +1,17 @@
 package me.percydan.borderremover;
 
 import com.mojang.brigadier.arguments.FloatArgumentType;
+import me.percydan.borderremover.config.WorldGenOptions;
+import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v1.CommandRegistrationCallback;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.command.CommandManager;
 
-public class Init implements ModInitializer {
+public class BorderRemover implements ModInitializer {
+    public static WorldGenOptions config;
+
     @Override
     public void onInitialize() {
         //Flyspeed command
@@ -21,5 +26,8 @@ public class Init implements ModInitializer {
                     }
             )));
         });
+
+        AutoConfig.register(WorldGenOptions.class, Toml4jConfigSerializer::new);
+        config = AutoConfig.getConfigHolder(WorldGenOptions.class).getConfig();
     }
 }

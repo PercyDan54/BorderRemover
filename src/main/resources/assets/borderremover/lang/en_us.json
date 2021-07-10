@@ -1,5 +1,9 @@
 {
-  "farlands.options.title": "World generation settings",
-  "farlands.options.offset": "Terrain Generation offset",
-  "farlands.options.enable": "Enable farlands"
+  "text.autoconfig.borderremover.title": "World generation settings",
+  "text.autoconfig.borderremover.option.enableFarlands": "Enable farlands",
+  "text.autoconfig.borderremover.option.genOffset": "Terrain generation offset",
+  "text.autoconfig.borderremover.option.xzCoordinateScale": "X/Z coordinate scale",
+  "text.autoconfig.borderremover.option.yCoordinateScale": "Y coordinate scale",
+  "text.autoconfig.borderremover.option.xzScaleMultiplier": "X/Z coordinate scale multiplier",
+  "text.autoconfig.borderremover.option.yScaleMultiplier": "Y coordinate scale multiplier"
 }

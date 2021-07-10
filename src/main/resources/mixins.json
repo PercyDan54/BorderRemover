@@ -7,18 +7,22 @@
     "MixinAquiferSampler",
     "MixinDimensionType",
     "MixinEntity",
-    "MixinGameOptions",
-    "MixinMinecraftServer",
+    "MixinEntity",
     "MixinNoiseChunkGenerator",
     "MixinNoiseSamplingConfig",
+    "MixinNoiseColumnSampler",
     "MixinOctavePerlinNoiseSampler",
-    "MixinOptionsScreen",
     "MixinPlayerEntity",
+    "MixinMinecraftServer",
     "MixinServerPlayNetWorkHandler",
     "MixinWorld",
+    "MixinWorldView",
     "MixinWorldBorder",
     "MixinWorldBorderCommand",
     "MixinWorldBorderProperties"
+  ],
+  "client": [
+    "MixinOptionsScreen"
   ],
   "injectors": {
     "defaultRequire": 1

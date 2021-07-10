@@ -1,7 +1,6 @@
 package me.percydan.borderremover.mixins;
 
-import me.percydan.borderremover.config.OptionAccess;
-import net.minecraft.client.MinecraftClient;
+import me.percydan.borderremover.BorderRemover;
 import net.minecraft.util.math.ChunkPos;
 import net.minecraft.world.gen.chunk.NoiseChunkGenerator;
 import org.spongepowered.asm.mixin.Mixin;
@@ -14,8 +13,7 @@ public abstract class MixinNoiseChunkGenerator {
     private ChunkPos applyOffset(ChunkPos pos) {
         int x = pos.x;
         int z = pos.z;
-        OptionAccess options = (OptionAccess) MinecraftClient.getInstance().options;
-        int offset = options.getGenOffset();
+        int offset = BorderRemover.config.genOffset;
 
         return new ChunkPos(x + offset, z + offset);
     }

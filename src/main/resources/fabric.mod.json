@@ -12,10 +12,10 @@
     "homepage": "https://github.com/PercyDan54",
     "sources": "https://github.com/PercyDan54/BorderRemover"
   },
-  "environment": "client",
+  "environment": "*",
   "entrypoints": {
     "main": [
-      "me.percydan.borderremover.Init"
+      "me.percydan.borderremover.BorderRemover"
     ]
   },
   "mixins": [
