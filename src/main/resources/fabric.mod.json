@@ -24,7 +24,8 @@
   "accessWidener": "farlands.accesswidener",
   "depends": {
     "fabricloader": ">=0.7.4",
+    "cloth-config2": "*",
     "fabric": "*",
-    "minecraft": ">=1.15"
+    "minecraft": ">=1.16"
   }
 }

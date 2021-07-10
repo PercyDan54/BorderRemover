@@ -7,7 +7,6 @@
     "MixinAquiferSampler",
     "MixinDimensionType",
     "MixinEntity",
-    "MixinEntity",
     "MixinNoiseChunkGenerator",
     "MixinNoiseSamplingConfig",
     "MixinNoiseColumnSampler",
