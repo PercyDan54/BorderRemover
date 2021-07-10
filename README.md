@@ -11,8 +11,10 @@ Take the coordinate you need and divide it by 16 to get the ChunkPos
 
 Some common values you may need:
 
-`±784425` = Move farlands to spawn
+`±784425` = Move farlands(if enabled) to (0,0)
 
-`±62754114` = Move farther lands to spawn
+`±62754114` = Move farther lands(if enabled) to (0,0)
 
 `Y / XZ Scale`: Modifies the Y / XZ coordinate scale multiplier. Set to `default` to disable modifying.
+
+Set `Y Scale` to `262144` to get the sky far lands
