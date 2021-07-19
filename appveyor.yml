@@ -10,14 +10,14 @@ build_script:
 - cmd: gradlew build
 test: off
 artifacts:
-- path: .\build\libs\BorderRemover-1.0.2.jar
-  name: BorderRemover-1.0.2.jar
-- path: .\build\libs\BorderRemover-1.0.2-sources-dev.jar
-  name: BorderRemover-1.0.2-sources-dev.jar
+- path: .\build\libs\BorderRemover-1.0.3.jar
+  name: BorderRemover-1.0.3.jar
+- path: .\build\libs\BorderRemover-1.0.3-sources-dev.jar
+  name: BorderRemover-1.0.3-sources-dev.jar
 deploy:
 - provider: GitHub
-  tag: 1.0.2
+  tag: 1.0.3
   auth_token:
     secure: wBUeC7f0SGZTu01Bl50RTSas9yizhxdAeqofugDSTpOoZFXOyzvP+X2OOAnaqIWz
   repository: PercyDan54/BorderRemover
-  artifact: BorderRemover-1.0.2.jar, BorderRemover-1.0.2-sources-dev.jar
+  artifact: BorderRemover-1.0.3.jar, BorderRemover-1.0.3-sources-dev.jar

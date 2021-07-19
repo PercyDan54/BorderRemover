@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
 
-@Mixin(AquiferSampler.class)
+@Mixin(AquiferSampler.Impl.class)
 public abstract class MixinAquiferSampler {
     @Shadow
     @Final
@@ -31,17 +31,17 @@ public abstract class MixinAquiferSampler {
 
     @Shadow
     @Final
-    private int[] waterLevels;
+    private AquiferSampler.Impl.FluidLevel[] waterLevels;
 
     /**
      * @author
      */
     @Overwrite
     private int index(int x, int y, int z) {
-        int i = x - this.startX;
-        int j = y - this.startY;
-        int k = z - this.startZ;
-        int dx = (j * this.sizeZ + k) * this.sizeX + i;
-        return MathHelper.clamp(dx, 0, this.waterLevels.length - 1);
+        int i = x - startX;
+        int j = y - startY;
+        int k = z - startZ;
+        int dx = (j * sizeZ + k) * sizeX + i;
+        return MathHelper.clamp(dx, 0, waterLevels.length - 1);
     }
 }
