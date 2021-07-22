@@ -19,7 +19,8 @@
     "MixinWorldView",
     "MixinWorldBorder",
     "MixinWorldBorderCommand",
-    "MixinWorldBorderProperties"
+    "MixinWorldBorderProperties",
+    "MixinShardFarlands"
   ],
   "client": [
     "MixinOptionsScreen"

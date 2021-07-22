@@ -6,6 +6,7 @@ import me.shedaniel.autoconfig.annotation.Config;
 @Config(name = "borderremover")
 public class WorldGenOptions implements ConfigData {
     public boolean enableFarlands;
+    public boolean shardFarlands;
     public int genOffset;
     public double xzCoordinateScale = 684.412;
     public double yCoordinateScale = 684.412;
