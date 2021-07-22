@@ -14,6 +14,7 @@ public abstract class MixinLinkedBlockPosHashSetStorage {
     private static int STARTING_OFFSET;
     @Shadow
     private static int HORIZONTAL_COLUMN_BIT_SEPARATION;
+
     @Inject(method = "<clinit>", at = @At("RETURN"))
     private void handleConstructor(CallbackInfo ci) {
         STARTING_OFFSET = MathHelper.log2(Integer.MAX_VALUE);

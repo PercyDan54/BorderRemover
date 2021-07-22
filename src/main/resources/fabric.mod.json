@@ -4,18 +4,22 @@
   "version": "${version}",
 
   "name": "Border Remover",
-  "description": "",
+  "description": "Minecraft mod for removing the 30,000,000 block limit and (optionally) brings back the farlands",
   "authors": [
     "PercyDan"
   ],
   "contact": {
-    "homepage": "https://github.com/PercyDan54",
-    "sources": "https://github.com/PercyDan54/BorderRemover"
+    "homepage": "https://github.com/PercyDan54/BorderRemover",
+    "sources": "https://github.com/PercyDan54/BorderRemover",
+    "issues": "https://github.com/PercyDan54/BorderRemover/issues"
   },
   "environment": "*",
   "entrypoints": {
     "main": [
       "me.percydan.borderremover.BorderRemover"
+    ],
+    "modmenu": [
+      "me.percydan.borderremover.config.ModMenuIntegration"
     ]
   },
   "mixins": [

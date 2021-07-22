@@ -1,5 +1,5 @@
 # Border Remover
-A Minecraft mod for removing the 30,000,000 block limit and provides some extra settings
+A Minecraft mod for removing the 30,000,000 block limit and (optionally) brings back the farlands
 [![](https://i.imgur.com/mmvsbdF.png)](https://www.curseforge.com/minecraft/mc-mods/cloth-config)
 ![](https://z3.ax1x.com/2021/07/12/WFFqRx.png)
 
