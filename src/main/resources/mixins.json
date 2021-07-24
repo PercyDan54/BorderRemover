@@ -3,6 +3,7 @@
   "minVersion": "0.8",
   "package": "me.percydan.borderremover.mixins",
   "compatibilityLevel": "JAVA_16",
+  "refmap": "BorderRemover-refmap.json",
   "mixins": [
     "MixinAquiferSampler",
     "MixinDimensionType",
