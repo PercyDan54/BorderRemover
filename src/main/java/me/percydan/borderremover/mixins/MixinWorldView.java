@@ -8,6 +8,9 @@ import org.spongepowered.asm.mixin.Overwrite;
 
 @Mixin(WorldView.class)
 public interface MixinWorldView extends BlockRenderView {
+    /**
+     * @author PercyDan
+     */
     @Overwrite
     default int getLightLevel(BlockPos pos, int ambientDarkness) {
         return this.getBaseLightLevel(pos, ambientDarkness);

@@ -16,6 +16,7 @@ public abstract class MixinNoiseSamplingConfig {
         return BorderRemover.config;
     }
 
+    @SuppressWarnings({"UnresolvedMixinReference"})
     @Redirect(method = "<clinit>", at = @At(target = "Lcom/mojang/serialization/Codec;doubleRange(DD)Lcom/mojang/serialization/Codec;", value = "INVOKE"))
     private static Codec<Double> fixRange(double min, double max) {
         return Codec.doubleRange(min, Double.MAX_VALUE);
@@ -24,7 +25,10 @@ public abstract class MixinNoiseSamplingConfig {
     @Inject(method = "getXZScale", at = @At("RETURN"), cancellable = true)
     public void changeXZScale(CallbackInfoReturnable<Double> cir) {
         String xzScaleMultiplier = getOptions().xzScaleMultiplier;
+        xzScaleMultiplier = xzScaleMultiplier.replace(",","");
+        getOptions().xzScaleMultiplier = xzScaleMultiplier;
         double multiplier;
+
         try {
             multiplier = Double.parseDouble(xzScaleMultiplier);
         } catch (NumberFormatException e) {
@@ -36,7 +40,10 @@ public abstract class MixinNoiseSamplingConfig {
     @Inject(method = "getYScale", at = @At("RETURN"), cancellable = true)
     public void changeYScale(CallbackInfoReturnable<Double> cir) {
         String yScaleMultiplier = getOptions().yScaleMultiplier;
+        yScaleMultiplier = yScaleMultiplier.replace(",","");
+        getOptions().yScaleMultiplier = yScaleMultiplier;
         double multiplier;
+
         try {
             multiplier = Double.parseDouble(yScaleMultiplier);
         } catch (NumberFormatException e) {

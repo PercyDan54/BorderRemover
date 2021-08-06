@@ -13,7 +13,7 @@ public abstract class MixinNoiseColumnSampler {
                     doubleValue = 684.412D,
                     ordinal = 0
             ),
-            method = "sampleNoiseColumn([DIILnet/minecraft/world/gen/chunk/GenerationShapeConfig;III)V"
+            method = "sampleNoiseColumn"
     )
     private static double setXZCoordinateScale(double original) {
         return BorderRemover.config.xzCoordinateScale;
@@ -24,7 +24,7 @@ public abstract class MixinNoiseColumnSampler {
                     doubleValue = 684.412D,
                     ordinal = 1
             ),
-            method = "sampleNoiseColumn([DIILnet/minecraft/world/gen/chunk/GenerationShapeConfig;III)V"
+            method = "sampleNoiseColumn"
     )
     private static double setYCoordinateScale(double original) {
         return BorderRemover.config.yCoordinateScale;

@@ -10,8 +10,8 @@ archivesBaseName = project.archives_base_name
 version = project.mod_version
 group = project.maven_group
 
-minecraft {
-	accessWidener = file('src/main/resources/farlands.accesswidener')
+loom {
+	accessWidenerPath = file('src/main/resources/farlands.accesswidener')
 }
 
 repositories {
@@ -27,8 +27,8 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	modImplementation "com.terraformersmc:modmenu:2.0.3"
-	modApi("me.shedaniel.cloth:cloth-config-fabric:5.0.34"){
+	modImplementation "com.terraformersmc:modmenu:2.0.4"
+	modApi("me.shedaniel.cloth:cloth-config-fabric:5.0.38"){
 		exclude(group: "net.fabricmc.fabric-api")
 	}
 }
