@@ -22,11 +22,15 @@ public abstract class MixinNoiseSamplingConfig {
         return Codec.doubleRange(min, Double.MAX_VALUE);
     }
 
-    @Inject(method = "getXZScale", at = @At("RETURN"), cancellable = true)
+    @Inject(method = "xzScale", at = @At("RETURN"), cancellable = true)
     public void changeXZScale(CallbackInfoReturnable<Double> cir) {
-        String xzScaleMultiplier = getOptions().xzScaleMultiplier;
+        WorldGenOptions options = getOptions();
+        if(options == null)
+            return;
+
+        String xzScaleMultiplier = options.xzScaleMultiplier;
         xzScaleMultiplier = xzScaleMultiplier.replace(",","");
-        getOptions().xzScaleMultiplier = xzScaleMultiplier;
+        options.xzScaleMultiplier = xzScaleMultiplier;
         double multiplier;
 
         try {
@@ -37,11 +41,15 @@ public abstract class MixinNoiseSamplingConfig {
         cir.setReturnValue(multiplier);
     }
 
-    @Inject(method = "getYScale", at = @At("RETURN"), cancellable = true)
+    @Inject(method = "yScale", at = @At("RETURN"), cancellable = true)
     public void changeYScale(CallbackInfoReturnable<Double> cir) {
-        String yScaleMultiplier = getOptions().yScaleMultiplier;
+        WorldGenOptions options = getOptions();
+        if(options == null)
+            return;
+
+        String yScaleMultiplier = options.yScaleMultiplier;
         yScaleMultiplier = yScaleMultiplier.replace(",","");
-        getOptions().yScaleMultiplier = yScaleMultiplier;
+        options.yScaleMultiplier = yScaleMultiplier;
         double multiplier;
 
         try {

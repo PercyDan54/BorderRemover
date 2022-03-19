@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
 @Mixin(NoiseChunkGenerator.class)
 public abstract class MixinNoiseChunkGenerator {
-    @ModifyVariable(method = "populateNoise(Lnet/minecraft/world/gen/StructureAccessor;Lnet/minecraft/world/chunk/Chunk;II)Lnet/minecraft/world/chunk/Chunk;", at = @At("STORE"))
+    @ModifyVariable(method = "populateNoise(Lnet/minecraft/world/gen/chunk/Blender;Lnet/minecraft/world/gen/StructureAccessor;Lnet/minecraft/world/chunk/Chunk;II)Lnet/minecraft/world/chunk/Chunk;", at = @At("STORE"))
     private ChunkPos applyOffset(ChunkPos pos) {
         int x = pos.x;
         int z = pos.z;

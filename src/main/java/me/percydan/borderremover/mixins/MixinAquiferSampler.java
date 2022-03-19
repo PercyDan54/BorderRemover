@@ -31,7 +31,7 @@ public abstract class MixinAquiferSampler {
 
     @Shadow
     @Final
-    private AquiferSampler.Impl.FluidLevel[] waterLevels;
+    private AquiferSampler.FluidLevel[] waterLevels;
 
     /**
      * @author

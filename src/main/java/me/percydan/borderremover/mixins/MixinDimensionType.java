@@ -11,6 +11,6 @@ public abstract class MixinDimensionType {
     @SuppressWarnings({"UnresolvedMixinReference"})
     @Redirect(method = "method_28522", at = @At(target = "Lcom/mojang/serialization/Codec;doubleRange(DD)Lcom/mojang/serialization/Codec;", value = "INVOKE"))
     private static Codec<Double> fixRange(double min, double max) {
-        return Codec.doubleRange(min, Float.MAX_VALUE);
+        return Codec.doubleRange(min, Double.MAX_VALUE);
     }
 }

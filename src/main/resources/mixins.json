@@ -11,7 +11,7 @@
     "MixinLinkedBlockPosHashSetStorage",
     "MixinNoiseChunkGenerator",
     "MixinNoiseSamplingConfig",
-    "MixinNoiseColumnSampler",
+    "MixinInterpolatedNoiseSampler",
     "MixinOctavePerlinNoiseSampler",
     "MixinPlayerEntity",
     "MixinMinecraftServer",
