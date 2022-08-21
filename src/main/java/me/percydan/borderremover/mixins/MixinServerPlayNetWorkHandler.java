@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(ServerPlayNetworkHandler.class)
 public abstract class MixinServerPlayNetWorkHandler {
-    @Inject(method = "validateVehicleMove", at = @At("RETURN"), cancellable = true)
+    @Inject(method = "isMovementInvalid", at = @At("RETURN"), cancellable = true)
     private static void validateVehicleMove(CallbackInfoReturnable<Boolean> ci) {
         ci.setReturnValue(false);
     }
