@@ -1,0 +1,37 @@
+name: Bug report
+description: Report a very clearly broken issue.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Bug report
+
+        Please check:
+        - If this problem happens without any additional mods installed, I can't and will NOT solve compatibility issues, especially with optimisation mods.
+
+  - type: dropdown
+    attributes:
+      label: Type
+      options:
+        - Crash to desktop
+        - Game behaviour
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Bug description
+      description: How did you find the bug? Any additional details that might help?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Screenshots or videos
+      description: Add screenshots or videos that show the bug here.
+      placeholder: Drag and drop the screenshots/videos into this box.
+    validations:
+      required: false
+  - type: input
+    attributes:
+      label: Minecraft Version
+    validations:
+      required: true
