@@ -31,24 +31,24 @@ public abstract class MixinShardFarlands {
             int i = MathHelper.floor(d);
             int j = MathHelper.floor(e);
             int k = MathHelper.floor(f);
-            double g, h, l, p, n;
-            g = d - (float) i;
-            h = e - (float) j;
-            l = f - (float) k;
-
-            if (yScale != 0.0D) {
-                if (yMax >= 0.0D && yMax < h) {
-                    n = yMax;
+            double g = d - (float) i;
+            double h = e - (float) j;
+            double l = f - (float) k;
+            double n;
+            if (yScale != 0.0) {
+                double m;
+                if (yMax >= 0.0 && yMax < h) {
+                    m = yMax;
                 } else {
-                    n = h;
+                    m = h;
                 }
 
-                p = (double) MathHelper.floor(n / yScale + 1.0000000116860974E-7D) * yScale;
+                n = (double) MathHelper.floor(m / yScale + 1.0000000116860974E-7) * yScale;
             } else {
-                p = 0.0D;
+                n = 0.0;
             }
 
-            cir.setReturnValue(sample(i, j, k, g, h - p, l, h));
+            cir.setReturnValue(sample(i, j, k, g, h - n, l, h));
         }
     }
 
@@ -76,7 +76,7 @@ public abstract class MixinShardFarlands {
     }
 
     @Shadow
-    private double sample(int sectionX, int sectionY, int sectionZ, double localX, double localY, double localZ, double fadeLocalX) {
+    private double sample(int sectionX, int sectionY, int sectionZ, double localX, double localY, double localZ, double fadeLocalY) {
         throw new AssertionError();
     }
 }

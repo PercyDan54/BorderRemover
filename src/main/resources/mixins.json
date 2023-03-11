@@ -2,7 +2,7 @@
   "required": false,
   "minVersion": "0.8",
   "package": "me.percydan.borderremover.mixins",
-  "compatibilityLevel": "JAVA_16",
+  "compatibilityLevel": "JAVA_17",
   "refmap": "BorderRemover-refmap.json",
   "mixins": [
     "MixinAquiferSampler",
@@ -10,7 +10,6 @@
     "MixinEntity",
     "MixinLinkedBlockPosHashSetStorage",
     "MixinNoiseChunkGenerator",
-    "MixinNoiseSamplingConfig",
     "MixinInterpolatedNoiseSampler",
     "MixinOctavePerlinNoiseSampler",
     "MixinPlayerEntity",
