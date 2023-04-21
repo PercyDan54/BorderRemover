@@ -8,22 +8,24 @@
     "MixinAquiferSampler",
     "MixinDimensionType",
     "MixinEntity",
-    "MixinLinkedBlockPosHashSetStorage",
-    "MixinNoiseChunkGenerator",
     "MixinInterpolatedNoiseSampler",
+    "MixinLinkedBlockPosHashSetStorage",
+    "MixinMinecraftServer",
+    "MixinNoiseChunkGenerator",
     "MixinOctavePerlinNoiseSampler",
     "MixinPlayerEntity",
-    "MixinMinecraftServer",
     "MixinServerPlayNetWorkHandler",
+    "MixinShardFarlands",
     "MixinWorld",
-    "MixinWorldView",
     "MixinWorldBorder",
     "MixinWorldBorderCommand",
     "MixinWorldBorderProperties",
-    "MixinShardFarlands"
+    "MixinWorldView"
   ],
   "client": [
-    "MixinOptionsScreen"
+    "options.IMixinGridWidget",
+    "options.MixinOptionsScreen",
+    "options.IMixinScreen"
   ],
   "injectors": {
     "defaultRequire": 1
