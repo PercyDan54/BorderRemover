@@ -10,14 +10,6 @@ A Minecraft mod for removing the 30,000,000 block limit and (optionally) brings 
 
 Take the coordinate you need and divide it by 16 to get the ChunkPos
 
-Some common values you may need:
-
-`±784425` = Move farlands(if enabled) to (0,0) in 1.17
-
-`±100406586` = Move farlands(if enabled) to (0,0) in 1.18
-
-`±62754114` = Move farther lands(if enabled) to (0,0)
-
 `Y / XZ Scale`: Modifies the Y / XZ coordinate scale multiplier. Set to `default` to disable modifying.
 
 Set `Y Scale` to `262144` to get the sky far lands(if enabled)

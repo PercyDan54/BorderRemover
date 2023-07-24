@@ -10,5 +10,5 @@ import java.util.List;
 @Mixin(GridWidget.class)
 public interface IMixinGridWidget {
     @Accessor
-    public abstract List<ClickableWidget> getChildren();
+    List<ClickableWidget> getChildren();
 }

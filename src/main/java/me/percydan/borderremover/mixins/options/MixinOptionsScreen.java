@@ -28,17 +28,16 @@ public abstract class MixinOptionsScreen implements IMixinScreen {
         ButtonWidget doneButton = null;
 
         // Minecraft 1.19.3
-        for (Drawable drawable: getDrawables()) {
+        for (Drawable drawable : getDrawables()) {
             if (drawable instanceof GridWidget gridWidget) {
-                widgets = ((IMixinGridWidget)gridWidget).getChildren();
+                widgets = ((IMixinGridWidget) gridWidget).getChildren();
                 for (ClickableWidget clickableWidget : widgets) {
                     if (clickableWidget instanceof ButtonWidget button) {
                         if (button.getWidth() != 200) {
                             lastX = button.getX();
                             lastY = button.getY();
                             buttonCount++;
-                        }
-                        else {
+                        } else {
                             doneButton = button;
                         }
                     }
@@ -54,8 +53,7 @@ public abstract class MixinOptionsScreen implements IMixinScreen {
                         lastX = button.getX();
                         lastY = button.getY();
                         buttonCount++;
-                    }
-                    else {
+                    } else {
                         doneButton = button;
                     }
                 }
@@ -66,14 +64,13 @@ public abstract class MixinOptionsScreen implements IMixinScreen {
         if (buttonCount % 2 == 0) {
             posX = lastX + 160;
             posY = lastY;
-        }
-        else {
+        } else {
             posX = lastX - 160;
             posY = lastY + doneButton.getHeight() + 5;
             doneButton.setY(doneButton.getY() + doneButton.getHeight() + 5);
         }
 
-        ((Screen) (Object) this).addDrawableChild(ButtonWidget.builder(Text.translatable("text.autoconfig.borderremover.title"), (button) -> {
+        callAddDrawableChild(ButtonWidget.builder(Text.translatable("text.autoconfig.borderremover.title"), (button) -> {
                     MinecraftClient.getInstance().setScreen(AutoConfig.getConfigScreen(WorldGenOptions.class, (Screen) (Object) this).get());
                 }
         ).dimensions(posX, posY, 150, 20).build());

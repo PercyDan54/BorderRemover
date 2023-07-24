@@ -9,11 +9,12 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(OctavePerlinNoiseSampler.class)
 public abstract class MixinOctavePerlinNoiseSampler {
-    @Inject(method = "maintainPrecision", at = @At("RETURN"), cancellable = true)
+    @Inject(method = "maintainPrecision", at = @At("HEAD"), cancellable = true)
     private static void maintainPrecision(double value, CallbackInfoReturnable<Double> cir) {
         if (!BorderRemover.config.enableFarlands)
             return;
 
         cir.setReturnValue(value);
+        cir.cancel();
     }
 }

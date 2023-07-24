@@ -23,9 +23,9 @@
     ]
   },
   "mixins": [
-    "mixins.json"
+    "mixins.borderremover.json"
   ],
-  "accessWidener": "farlands.accesswidener",
+  "accessWidener": "borderremover.accesswidener",
   "depends": {
     "fabricloader": ">=0.7.4",
     "cloth-config2": "*",

@@ -4,4 +4,3 @@ accessible class net/minecraft/world/border/WorldBorder$Area
 accessible class net/minecraft/world/border/WorldBorder$StaticArea
 accessible class net/minecraft/util/collection/LinkedBlockPosHashSet$Storage
 accessible class net/minecraft/world/gen/chunk/AquiferSampler$FluidLevel
-accessible method net/minecraft/client/gui/screen/Screen addDrawableChild (Lnet/minecraft/client/gui/Element;)Lnet/minecraft/client/gui/Element;
