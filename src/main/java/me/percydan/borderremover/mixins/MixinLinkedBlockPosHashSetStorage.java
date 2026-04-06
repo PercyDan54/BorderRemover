@@ -15,7 +15,6 @@ public abstract class MixinLinkedBlockPosHashSetStorage {
     @Shadow
     private static int HORIZONTAL_COLUMN_BIT_SEPARATION;
 
-    @SuppressWarnings({"UnresolvedMixinReference"})
     @Inject(method = "<clinit>", at = @At("RETURN"))
     private static void handleConstructor(CallbackInfo ci) {
         STARTING_OFFSET = MathHelper.floorLog2(Integer.MAX_VALUE);

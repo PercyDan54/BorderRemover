@@ -10,11 +10,12 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(WorldBorder.class)
 public abstract class MixinWorldBorder {
     @Shadow
-    private int maxRadius;
-    @Shadow
-    private WorldBorder.Area area;
+    int maxRadius;
 
-    @Inject(method = "<init>", at = @At("RETURN"))
+    @Shadow
+    WorldBorder.Area area;
+
+    @Inject(method = "<init>(Lnet/minecraft/world/border/WorldBorder$Properties;)V", at = @At("RETURN"))
     private void handleConstructor(CallbackInfo ci) {
         this.maxRadius = Integer.MAX_VALUE;
         this.area = ((WorldBorder) (Object) this).new StaticArea(4294967294D);

@@ -8,8 +8,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(DimensionType.class)
 public abstract class MixinDimensionType {
-    @SuppressWarnings({"UnresolvedMixinReference"})
-    @Redirect(method = "method_28522", at = @At(target = "Lcom/mojang/serialization/Codec;doubleRange(DD)Lcom/mojang/serialization/Codec;", value = "INVOKE"))
+    @Redirect(method = "method_75747", at = @At(target = "Lcom/mojang/serialization/Codec;doubleRange(DD)Lcom/mojang/serialization/Codec;", value = "INVOKE"))
     private static Codec<Double> fixRange(double min, double max) {
         return Codec.doubleRange(min, Double.MAX_VALUE);
     }

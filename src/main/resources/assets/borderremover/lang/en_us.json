@@ -1,10 +1,10 @@
 {
-  "text.autoconfig.borderremover.title": "World generation settings",
-  "text.autoconfig.borderremover.option.enableFarlands": "Enable farlands",
-  "text.autoconfig.borderremover.option.shardFarlands": "Shard farlands",
-  "text.autoconfig.borderremover.option.genOffset": "Terrain generation offset",
-  "text.autoconfig.borderremover.option.xzCoordinateScale": "X/Z coordinate scale",
-  "text.autoconfig.borderremover.option.yCoordinateScale": "Y coordinate scale",
-  "text.autoconfig.borderremover.option.xzScaleMultiplier": "X/Z coordinate scale multiplier",
-  "text.autoconfig.borderremover.option.yScaleMultiplier": "Y coordinate scale multiplier"
+  "text.autoconfig.borderremover.title": "World Generation Settings",
+  "text.autoconfig.borderremover.option.enableFarlands": "Enable Farlands",
+  "text.autoconfig.borderremover.option.shardFarlands": "Shard Farlands",
+  "text.autoconfig.borderremover.option.genOffset": "Terrain Generation Offset",
+  "text.autoconfig.borderremover.option.xzCoordinateScale": "X/Z Coordinate Scale",
+  "text.autoconfig.borderremover.option.yCoordinateScale": "Y Coordinate Scale",
+  "text.autoconfig.borderremover.option.xzScaleMultiplier": "X/Z Coordinate Scale Multiplier",
+  "text.autoconfig.borderremover.option.yScaleMultiplier": "Y Coordinate Scale Multiplier"
 }

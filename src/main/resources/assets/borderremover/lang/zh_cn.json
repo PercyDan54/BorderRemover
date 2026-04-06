@@ -1,10 +1,10 @@
 {
   "text.autoconfig.borderremover.title": "世界生成设置",
   "text.autoconfig.borderremover.option.enableFarlands": "生成边境之地",
-  "text.autoconfig.borderremover.option.shardFarlands": "Shard farlands",
+  "text.autoconfig.borderremover.option.shardFarlands": "Shard Farlands",
   "text.autoconfig.borderremover.option.genOffset": "地形生成偏移",
-  "text.autoconfig.borderremover.option.xzCoordinateScale": "X/Z coordinate scale",
-  "text.autoconfig.borderremover.option.yCoordinateScale": "Y coordinate scale",
-  "text.autoconfig.borderremover.option.xzScaleMultiplier": "X/Z coordinate scale 倍率",
-  "text.autoconfig.borderremover.option.yScaleMultiplier": "Y coordinate scale 倍率"
+  "text.autoconfig.borderremover.option.xzCoordinateScale": "X/Z Coordinate Scale",
+  "text.autoconfig.borderremover.option.yCoordinateScale": "Y Coordinate Scale",
+  "text.autoconfig.borderremover.option.xzScaleMultiplier": "X/Z Coordinate Scale 倍率",
+  "text.autoconfig.borderremover.option.yScaleMultiplier": "Y Coordinate Scale 倍率"
 }

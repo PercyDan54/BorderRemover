@@ -20,6 +20,7 @@
     "MixinWorldBorderCommand",
     "MixinWorldBorderProperties",
     "MixinWorldView",
+    "MixinChunkPos",
     "offset.MixinChunk",
     "offset.MixinChunkNoiseSampler",
     "offset.MixinChunkRandom"
